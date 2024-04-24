@@ -1,4 +1,5 @@
 import React from "react";
+import hero from '../assets/images/minhaFoto03.png';
 
 
 const Hero = () => {
@@ -6,11 +7,9 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex py-10 md:flex-row flex-col items-center">
-      <div className="flex-1 flex items-center justify-center">
-        {/* Div que envolve a imagem com estilo de círculo e fundo */}
-        <div className="relative rounded-full overflow-hidden w-96 h-96 bg-cyan-700  border-2 border-cyan-700">
-          <img src="src\assets\images\minhaFoto.png" alt="" className=" absolute inset w-full h-full object-cover" />
-        </div>
+      
+      <div>
+        <img src= {hero} alt="" className=""  />
       </div>
 
       <div className="flex-1">

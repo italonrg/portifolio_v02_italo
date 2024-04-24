@@ -10,7 +10,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #3ddc81;
+  background-color: #3db7dc;
   font-weight: 600;
   text-align: center;
   display: flex;
@@ -38,4 +38,5 @@ body {
 
 .swiper-pagination-bullet {
   background-color: #fff;
+
 }

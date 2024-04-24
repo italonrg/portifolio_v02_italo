@@ -1,37 +1,30 @@
-import React from "react";
+import React from 'react';
 
 
 const Project = () => {
+
+
+
   const projects = [
     {
-      img: "/src/assets/images/pianoSimulator.png",
-      name: "Piano Virtual",
-      github_link: "https://github.com/italonrg",
-      live_link: "https://italonrg.github.io/Piano-Virtual-html_css_Js-/",
+      img: "../assets/images/pianoSimualtor.png",
+      name: "Simulador de Piano",
+      description: "Um jogo de Piano feito com Js e HTML e CSS",
     },
     {
-      img: "/src/assets/images/Em_Brevex.png",
-      name: "em-breve##",
-      github_link: "https://github.com/italonrg",
-      live_link: "https://italonrg.github.io/Piano-Virtual-html_css_Js-/",
+      img: "../assets/images/Em_Brevex.png",
+      name: "Em Breve",
+      description: "Um novo e interesante projeto está por vir",
     },
     {
-      img: "/src/assets/images/Em_Brevex.png",
-      name: "em-breve##",
-      github_link: "https://github.com/italonrg",
-      live_link: "https://italonrg.github.io/Piano-Virtual-html_css_Js-/",
+      img: "../assets/images/Em_Brevex.png",
+      name: "Em Breve",
+      description: "Um novo e interesante projeto está por vir",
     },
     {
-      img: "/src/assets/images/Em_Brevex.png",
-      name: "em-breve##",
-      github_link: "https://github.com/italonrg",
-      live_link: "https://italonrg.github.io/Piano-Virtual-html_css_Js-/",
-    },
-    {
-      img: "/src/assets/images/Em_Brevex.png",
-      name: "em-brevexx",
-      github_link: "https://github.com/italonrg",
-      live_link: "https://italonrg.github.io/Piano-Virtual-html_css_Js-/",
+      img: "../assets/images/Em_Brevex.png",
+      name: "Em Breve",
+      description: "Um novo e interesante projeto está por vir",
     },
   ];
 
@@ -44,30 +37,21 @@ const Project = () => {
         <p className="text-cyan-700 mt-3 text-lg">Confira!!!</p>
       </div>
       <br />
-      {projects.map((project_info, i) => (
-        <div className="h-fit w-full p-4 bg-slate-700 rounded-xl" key={i}>
-          <img src={project_info.img} alt="" className="rounded-lg" />
-          <h3 className="text-xl my-4">{project_info.name}</h3>
-          <div className="flex gap-3">
-            <a
-              className="text-cyan-600"
-              href={project_info.live_link}
-            >
-              Live Demo
-            </a>
-            <a
-              className="text-cyan-600"
-              href={project_info.github_link}
-            >
-              Projeto no Github
-            </a>
+      <div className="flex flex-wrap justify-center">
+        {projects.map((project, index) => (
+          <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+            <div className="card bg-lightslategray rounded-lg overflow-hidden">
+              <img src={project.img} alt={project.name} className="w-full h-40 object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl mb-2">{project.name}</h3>
+                <p className="text-gray-300">{project.description}</p>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };
 
 export default Project;
-
-
